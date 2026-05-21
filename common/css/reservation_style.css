@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0; 
+    color: #4b3a25;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdfcf9;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;           
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  margin: 0;            
+}
+
+/* ナビ全体 */
+.header nav ul li a {
+  font-family: 'Zen Antique', serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #5b4b35;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #5b4b35;
+  transition: width 0.3s ease;
+}
+
+
+
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header .logo {
+  font-family: 'Zen Antique', serif;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  letter-spacing: 0.1em;
+  color: #5b4b35;
+}
+
+.hamburger {
+  display: none;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #5b4b35;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+
+
+
+/* ===== Reservation Hero ===== */
+.reservation-hero{
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/in-shop.png');
+  background-size: cover;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.reservation-hero-overlay{
+  position: absolute;
+  inset: 0; 
+  background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+
+.reservation-hero h1{
+  position: relative;
+  z-index: 2;
+  font-family: 'Zen Antique', serif;
+  color: #fff;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px 20px;
+  text-shadow: 0 6px 24px rgba(0,0,0,0.45);
+}
+
+
+/* ===== Reservation Section ===== */
+.reservation {
+  margin: 120px 0;
+}
+
+.reservation-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* image */
+.reservation-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* text */
+.reservation-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  font-family: 'Zen Antique', serif;
+}
+
+.reservation-text p {
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.reservation-note {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* ===== Back ===== */
+.reservation-back {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+/* ------------------------------
+  フッター
+------------------------------ */
+.site-footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #5b4b35;
+    color: #fff;
+}
+
+.site-footer p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.sns-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    padding: 0 16px;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    }
+
+  .header .logo {
+        font-size: 12px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+  nav.active {
+      display: block;
+    }
+
+    .hamburger {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 50px;
+    }
+
+    .hamburger span {
+      margin: 4px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    
+    }
+
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fdfcf9;
+      display: none;
+      padding: 24px 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+  
+  .reservation {
+      margin: 40px 0;
+    }
+
+  .reservation-hero {
+    background-position: center;
+    background-size: cover;
+    height: 120px;
+    box-sizing: border-box;
+    }
+
+  .reservation-hero h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .reservation-inner {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+  .reservation-image{ 
+    order: 2;
+  }
+
+  .reservation-text{
+    order: 1;
+}
+
+.reservation-text h2 {
+      font-size: 25px;
+      margin-bottom: 16px;
+      text-align: center; 
+}
+.reservation-text p {
+      font-size: 14px;
+      margin-left: 20px;
+  }
+
+:root {
+    --slide-height: 28vh;
+  }
+
+}

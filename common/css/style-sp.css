@@ -1,0 +1,300 @@
+@media (max-width: 768px) {
+  .concept, .swiper, .cafe-menu, .reservation, .access, .instagram-feed {
+    padding: 30px 16px;
+  }
+
+  .concept h2, .swiper h2, .cafe-menu h2, .reservation h2, .access h2, .instagram-feed h2 {
+    margin-bottom: 16px;
+  }
+
+  .concept p, .swiper p, .cafe-menu p, .reservation p, .access p, .instagram-feed p {
+    margin-bottom: 16px;
+  }
+  
+    header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    padding: 0 16px;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    }
+
+  .header .logo {
+        font-size: 1.2rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+  nav.active {
+      display: block;
+    }
+
+    .hamburger {
+      display: block;
+      width: 22px;
+      height: 50px;
+    }
+
+    .hamburger span {
+      margin: 4px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    
+    }
+
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fdfcf9;
+      display: none;
+      padding: 24px 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+  .hero {
+    padding: 0;
+    height: 55vh;
+    padding-top: 56px;
+    }
+
+  .hero h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+  .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+  .container, .content {
+        padding: 0 16px;
+    }
+
+  .concept-inner {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .concept-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .concept-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-right: 0;
+  }
+
+  .concept-photo img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .dog-run-title {
+    font-size: 1.6rem;
+    padding: 24px 0;
+  }
+
+  .dog-run-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .swiper {
+    padding: 0 12px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    gap: 0;
+  }
+
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: none;
+    margin-right: 16px;
+    aspect-ratio: 16/10;
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+  } 
+
+.cafe-menu h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .menu-grid {
+    display: none;
+  }
+
+  .menu-sp-text {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .menu-sp-text p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .menu-sp-img {
+    display: flex;
+    gap: 12px;
+    overflow-x: hidden;
+    padding-bottom: 15px;
+  } 
+
+  .cafe-menu .btn-primary {
+    display: inline-block;
+  }
+
+
+  .menu-sp-item {
+    flex: 0 0 calc(32% - 6px); 
+  }
+
+  .menu-sp-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .menu-sp-img::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reservation-inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  .reservation-title {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+
+  .reservation-info {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 16px 24px; 
+  font-size: 0.8rem;
+  line-height: 1.7;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.info-row {
+  display: contents; 
+}
+
+.label {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.1rem;
+  color: #4b3a25;
+  text-align: right;
+}
+
+.value {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.1rem;
+  font-feature-settings: "palt";
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+  
+
+  .reservation-image {
+    margin-bottom: 24px;
+  }
+
+  .reservation-image img {
+   margin: 0 auto;
+   max-width: 300px;
+  }
+
+  .time {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-feature-settings: "palt";
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+
+  .access-inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .access-text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .access-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .access-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .access-map iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .instagram-feed h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+   :root {
+    --slide-height: 28vh;
+  }
+
+
+}

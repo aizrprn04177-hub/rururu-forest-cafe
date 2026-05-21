@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu | Rururu Forest Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/menu_style.css"> 
+</head>
+<body>
+<header class="header">
+  <div class="logo">Rururu Forest Café</div>
+  <nav class="nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="dogrun.html">Dog Run</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="../index.html#access">Access</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="メニュー">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+
+
+  <section class="menu-hero">
+    <div class="menu-hero-overlay"></div>
+    <h1>MENU</h1>
+  </section>
+
+  <main class="menu-page">
+    <div class="container" style="max-width:1200px;margin:36px auto;padding:0 20px;">
+
+      <div class="menu-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="lunch">Lunch</button>
+        <button class="filter-btn" data-filter="cafe">Cafe</button>
+        <button class="filter-btn" data-filter="dog">Dog</button>
+      </div>
+
+      <div class="menu-grid" id="menu-grid" aria-live="polite">
+
+        <article class="menu-card" data-category="lunch">
+          <div class="menu-card-media">
+            <img src="images/humanmenu.png" alt="季節のランチプレート">
+          </div>
+          <div class="menu-card-body">
+            <h2>季節のランチプレート</h2>
+            <p class="price">¥1,350</p>
+            <p class="excerpt">地元の旬食材を使用。ドリンク付き</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="lunch">
+          <div class="menu-card-media">
+            <img src="images/onigiri.png" alt="ワンプレートランチ">
+          </div>
+          <div class="menu-card-body">
+            <h2>ワンプレートランチ</h2>
+            <p class="price">¥1,250</p>
+            <p class="excerpt">女性に人気！</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="lunch">
+          <div class="menu-card-media">
+            <img src="images/Sandwitch.png" alt="サンドイッチセット">
+          </div>
+          <div class="menu-card-body">
+            <h2>サンドウィッチセット</h2>
+            <p class="price">¥1,200</p>
+            <p class="excerpt">サラダとスープ付</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cafe">
+          <div class="menu-card-media">
+            <img src="images/coffee.png" alt="ハウスブレンドコーヒー">
+          </div>
+          <div class="menu-card-body">
+            <h2>ハウスブレンドコーヒー</h2>
+            <p class="price">¥450</p>
+            <p class="excerpt">バランスの良い深煎りブレンド（hot / ice）。</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cafe">
+          <div class="menu-card-media">
+            <img src="images/dessert.png" alt="本日のケーキ">
+          </div>
+          <div class="menu-card-body">
+            <h2>本日のケーキ</h2>
+            <p class="price">¥550</p>
+            <p class="excerpt">季節のフルーツを使った自家製ケーキ（日替わり）。</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cafe">
+          <div class="menu-card-media">
+            <img src="images/montblan.png" alt="モンブラン">
+          </div>
+          <div class="menu-card-body">
+            <h2>モンブラン</h2>
+            <p class="price">¥550</p>
+            <p class="excerpt">丹波栗を使ったモンブラン。</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cafe">
+          <div class="menu-card-media">
+            <img src="images/pancake.png" alt="パンケーキ">
+          </div>
+          <div class="menu-card-body">
+            <h2>パンケーキ</h2>
+            <p class="price">¥750</p>
+            <p class="excerpt">ふわふわのスフレパンケーキ</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="dog">
+          <div class="menu-card-media">
+            <img src="images/dogmenu.png" alt="わんちゃんプレート">
+          </div>
+          <div class="menu-card-body">
+            <h2>わんちゃんプレート</h2>
+            <p class="price">¥400</p>
+            <p class="excerpt">鶏ささみベースのやさしい味付け。</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="dog">
+          <div class="menu-card-media">
+            <img src="images/dogpafe.png" alt="わんちゃんパフェ">
+          </div>
+          <div class="menu-card-body">
+            <h2>わんわんパフェ</h2>
+            <p class="price">¥650</p>
+            <p class="excerpt">野菜と鶏肉で作った愛犬用のパフェ</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="dog">
+          <div class="menu-card-media">
+            <img src="images/dog_cookie.png" alt="無添加ビスケット">
+          </div>
+          <div class="menu-card-body">
+            <h2>無添加ビスケット</h2>
+            <p class="price">¥350</p>
+            <p class="excerpt">お土産にも人気の手作りビスケット。</p>
+          </div>
+        </article>
+
+        
+      </div>
+
+      <div style="margin-top:28px;">
+        <p class="noteb">※価格は税込。アレルギーがある場合はスタッフにお知らせください。</p>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="menu-modal" class="menu-modal" aria-hidden="true">
+    <button id="menu-modal-close" class="menu-modal-close" aria-label="閉じる">✕</button>
+    <img id="menu-modal-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="メニュー画像">
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 Rururu Forest Café</p>
+  </footer>
+
+  <!-- JS: フィルター + モーダル -->
+  <script>
+  (function(){
+    // filter buttons
+    const grid = document.getElementById('menu-grid');
+    const buttons = document.querySelectorAll('.filter-btn');
+    function setFilter(category){
+      const cards = grid.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+          card.style.opacity = 0;
+          requestAnimationFrame(()=> card.style.opacity = 1);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        setFilter(btn.dataset.filter);
+      });
+    });
+
+    // modal (click image to open)
+    const modal = document.getElementById('menu-modal');
+    const modalImg = document.getElementById('menu-modal-img');
+    const modalClose = document.getElementById('menu-modal-close');
+
+    grid.addEventListener('click', (e) => {
+      const img = e.target.closest('.menu-card')?.querySelector('img');
+      if (!img) return;
+      modalImg.src = img.src;
+      modalImg.alt = img.alt || '';
+      modal.setAttribute('aria-hidden','false');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      modalImg.src = '';
+    }
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    setFilter('all');
+  })();
+
+  const params = new 
+  URLSearchParams(window.location.search);
+  const filter = params.get('filter');
+
+  if (filter) {
+    const btn = document.querySelector(`[data-filter="${filter}"]`);
+    if (btn) {
+      btn.click();
+    }
+  }
+  </script>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

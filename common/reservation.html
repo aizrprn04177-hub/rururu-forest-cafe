@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservation | Dog Cafe Clair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reservation_style.css">
+</head>
+
+<body>
+<header class="header">
+  <div class="logo">Rururu Forest Café</div>
+  <nav class="nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="dogrun.html">Dog Run</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="../index.html#access">Access</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="メニュー">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+
+ <section class="reservation-hero">
+    <div class="reservation-hero-overlay"></div>
+    <h1>RESERVATION</h1>
+  </section>
+
+<section class="reservation fade-in">
+  <div class="reservation-inner">
+
+    <div class="reservation-image">
+      <img src="../images/calendar.png" alt="営業日カレンダー">
+    </div>
+
+    <div class="reservation-text">
+      <h2>ご予約について</h2>
+      <p>
+        営業時間：11:00 – 16:00<br>
+        定休日：水・木<br>
+        TEL：03-1234-5678
+      </p>
+
+      <p class="reservation-note">
+        お席に限りがあるため、<br>
+        ご来店の際は事前のご予約をおすすめしております。
+        ご予約はお電話もしくはInstagramのDMにてお願いいたします。
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 Rururu Forest Café</p>
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

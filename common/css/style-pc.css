@@ -1,0 +1,593 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0; 
+    color: #4b3a25;
+}
+
+section {
+    padding: 120px 8%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff8f0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;           
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  margin: 0;            
+}
+
+/* ナビ全体 */
+.header nav ul li a {
+  font-family: 'Zen Antique', serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #5b4b35;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #5b4b35;
+  transition: width 0.3s ease;
+}
+
+
+
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header .logo {
+  font-family: 'Zen Antique', serif;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  letter-spacing: 0.1em;
+  color: #5b4b35;
+}
+
+.hamburger {
+  display: none;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #5b4b35;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+
+/* ------------------------------
+  Heroセクション
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&family=Patrick+Hand&display=swap');
+
+.hero {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.55),rgba(0,0,0,0.15) transparent);
+    z-index: 1;
+}
+
+.hero-slideshow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.hero-slideshow img.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-family:  'Zen Antique', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.hero-text p {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    margin-top: 1rem;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+
+/* ------------------------------
+  コンセプトセクション
+------------------------------ */
+.concept {
+  background-color: #fff8f0;
+    display: flex;
+    justify-content: center;
+}
+
+.concept-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.concept-text h2 {
+    font-family: Zen Antique, serif;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #5b4b35;
+}
+.concept-text p {
+
+    max-width: 520px;
+    font-size: 1.3rem;
+    line-height: 1.9;
+    white-space: normal;
+    color: #4b3a25;
+}
+.concept-photo img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    margin-left: 40px;
+}
+
+/* ------------------------------
+  ドッグランセクション
+------------------------------ */
+:root {
+  --gap: 28px;
+  --slide-percent: 0.70; 
+  --slide-max-width: 760px;
+  --slide-height: 36vh; 
+}
+
+.swiper {
+  width: 100%;
+  padding: 0 var(--gap);
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  position: relative;
+  display: flex;
+  width: max-content;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  will-change: transform;
+}
+
+  .swiper-slide {
+  flex-shrink: 0;
+  width: clamp(0px, calc(var(--slide-percent) * 100%), var(--slide-max-width));
+  margin-right: var(--gap);
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  
+  background: #ddd;
+  transform: scale(0.9);
+  opacity: 0.45;
+  transition: transform 0.56s ease-in-out;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.swiper-slide.active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 12px;
+}
+
+ .transform-on {
+  transition: transform .7s;
+}
+
+.transform-off {
+  transition: transform 0s;
+}
+
+
+.dog-run-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--base-font);
+  padding: 40px 20px;
+  font-family: 'Zen Antique', serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #5b4b35
+}
+
+.dog-run-text {
+  text-align: center;
+  margin-top: 30px;
+  padding: 40px 20px;
+}
+
+.dog-run-text p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  line-height: 1.9;
+  color: #4b3a25;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 38px;
+  background: #5A3E2B;
+  color: #fff;
+  font-family: Zen Antique, serif;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+.btn-primary:hover {
+  background-color: #7e5e32;
+  transform: translate(-2px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+
+/* ------------------------------
+  メニューセクション
+------------------------------ */
+.cafe-menu {
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Zen Antique', serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #5b4b35;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.menu-card:hover img {
+    transform: scale(1.05);
+}
+
+.menu-sp-text {
+    display: none;
+}
+
+.menu-sp-img {
+    display: none;
+}
+
+.cafe-menu > .btn-primary {
+    display: none;
+}
+
+/* ------------------------------
+  予約セクション
+------------------------------ */
+.reservation {
+  background-color: #fff8f0;
+}
+
+.reservation-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "image text"
+    "button button";
+  gap: 48px 80px;
+  align-items: center;
+}
+
+.reservation-title {
+  grid-area: title;
+  font-family: 'Zen Antique', serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #5b4b35;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.reservation-text {
+  grid-area: text;
+    font-size: 2rem;
+    line-height: 1.9;
+    white-space: normal;
+    color: #4b3a25;
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 8em 1fr;
+  column-gap: 16px;
+  align-items: baseline;
+}
+
+.label {
+  font-size: 1.6rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.value {
+  font-size: 1.6rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reservation-image {
+  grid-area: image;
+}
+
+.reservation-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.reservation-inner .btn-primary {
+  grid-area: button;
+  justify-self: center;
+  width: auto;
+}
+
+.time {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-feature-settings: "palt";
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+  }
+
+/* ------------------------------
+  アクセスセクション
+------------------------------ */
+.access {
+    background-color: #fff8f0;
+    position: relative;
+}
+
+.access-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.access-text h2 {
+    font-family: Zen Antique, serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #5b4b35;
+}
+
+.access-address {
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #4b3a25;
+    margin-bottom: 25px;
+}
+
+.access-map iframe {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.access::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(91,75,53,0.05), transparent);
+}
+
+/* ------------------------------
+  SNSセクション
+------------------------------ */
+
+.instagram-feed .elfsight-app-e1e791db-2df7-4126-914b-53ab63b4fe3b {
+  transform: scale(0.75);
+  transform-origin: top center;
+  margin-bottom: -120px;
+}
+
+.instagram-feed {
+  padding-top: 40px;    
+  background-color: #fff8f0;
+}
+
+.instagram-feed h2 {
+  font-family: 'Zen Antique', serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  color: #5b4b35;
+  margin-bottom: 40px;
+  text-align: center !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instagram-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.instagram-link a {
+  display: inline-block;
+}
+
+
+/* ------------------------------
+  フッター
+------------------------------ */
+.site-footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #5b4b35;
+    color: #fff8f0;
+}
+
+.site-footer p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.sns-link {
+    color: #fff8f0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+

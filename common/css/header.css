@@ -1,0 +1,145 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdfcf9;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;           
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  margin: 0;            
+}
+
+/* ナビ全体 */
+.header nav ul li a {
+  font-family: 'Zen Antique', serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #5b4b35;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #5b4b35;
+  transition: width 0.3s ease;
+}
+
+
+
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header .logo {
+  font-family: 'Zen Antique', serif;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  letter-spacing: 0.1em;
+  color: #5b4b35;
+}
+
+.hamburger {
+  display: none;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #5b4b35;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    padding: 0 16px;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    }
+
+  .header .logo {
+        font-size: 12px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+  nav.active {
+      display: block;
+    }
+
+    .hamburger {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 50px;
+    }
+
+    .hamburger span {
+      margin: 4px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    
+    }
+
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fdfcf9;
+      display: none;
+      padding: 24px 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+}

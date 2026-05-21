@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Run | Rururu Forest Café</title>
+  <link rel="stylesheet" href="css/dogrun_style.css">
+  
+</head>
+<body>
+<header class="header">
+  <div class="logo">Rururu Forest Café</div>
+  <nav class="nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="dogrun.html">Dog Run</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="../index.html#access">Access</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="メニュー">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+
+  <section class="dogrun-hero">
+    <div class="dogrun-hero-overlay"></div>
+    <h1>DOG RUN</h1>
+  </section>
+
+  <section class="dogrun-content">
+    <h2>広々とした人工芝のドッグラン</h2>
+    <p>
+      Rururu Forest Café のドッグランは、愛犬が思いっきり走り回れるように、<br>
+      ふかふかの人工芝と広いスペースをご用意しています。<br>
+      カフェご利用のお客様は無料でお使いいただけます。
+    </p>
+
+    <div class="dogrun-gallery">
+      <img src="images/will.png" alt="ドッグラン写真1">
+      <img src="images/willandmarble.png" alt="ドッグラン写真2">
+      <img src="../images/elle.png" alt="ドッグラン写真3">
+    </div>
+
+    <h3>ドッグランご利用ルール</h3>
+    <ul class="dogrun-rules">
+      <li>・ワクチン・狂犬病予防接種を済ませているわんちゃんのみ利用可能です。</li>
+      <li>・他のわんちゃんとのトラブル防止のため、攻撃的な行動が見られた場合はご利用をお控えください。</li>
+      <li>・飼い主様は必ず目を離さず見守りをお願いします。</li>
+      <li>・うんちは必ずお持ち帰りいただくか、指定のゴミ箱へ捨ててください。</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+  <p>© 2025 Rururu Forest Café</p>
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
